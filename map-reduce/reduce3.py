@@ -24,13 +24,3 @@ for line in sys.stdin:
 	n += 1
 
 print(cur_key + '\t' + str(mean/n) + '\t' + str(len(uq_set)) )
-
-# hadoop jar hadoop-streaming.jar \
-#     -input /home/sony/Oleg/hse/big_data/input \
-#     -output /users/advert \
-#     -mapper map.py \
-#     -reducer reduce.py \
-#     -file map.py \
-#     -file reduce.py
-
-# cat star2002-sample.csv | python map1.py | sort -k1,1 | python reduce1.py | sort -k1,1 | python reduce2.py | sort -k1,1 | python reduce_last.py > output.txt
