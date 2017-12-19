@@ -29,16 +29,16 @@ cat star2002-sample.csv | python map1.py | sort -k1,1 | python reduce1.py | sort
 
 ## Testing in hadoop-docker
 1. Run [docker](https://docs.docker.com/compose/install/):
-
-``shell
-sudo docker run -it sequenceiq/hadoop-docker:2.7.1 /etc/bootstrap.sh -bash
-```
+    ```shell
+    sudo docker run -it sequenceiq/hadoop-docker:2.7.1 /etc/bootstrap.sh -bash
+    ```
 
 2. In local terminal:
-    ```shell
+   ```shell
    sudo docker ps
    ```
    copy name of docker in my case wonderful_mcnulty. After that copy data and all mapers and reducers to docker
+   
    ```shell
    sudo docker cp ./star2002-sample.csv wonderful_mcnulty:sample.csv
    sudo docker cp ./map1.py wonderful_mcnulty:map1.py
