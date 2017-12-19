@@ -4,7 +4,7 @@
 Data taken from [here](http://sdm.lbl.gov/fastbit/data/star2002-full.csv.gz)
 
 Data Columns:
-1. antiNucleus INT
+* antiNucleus INT
 * eventFile UINT
 * eventNumber INT
 * eventTime DOUBLE
@@ -29,7 +29,10 @@ cat star2002-sample.csv | python map1.py | sort -k1,1 | python reduce1.py | sort
 
 ## Testing in hadoop-docker
 1. Run [docker](https://docs.docker.com/compose/install/):
+
+``shell
 sudo docker run -it sequenceiq/hadoop-docker:2.7.1 /etc/bootstrap.sh -bash
+```
 
 2. In local terminal:
     ```shell
